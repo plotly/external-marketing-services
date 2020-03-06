@@ -1,0 +1,207 @@
+@import url("https://use.typekit.net/dsx1rks.css");
+
+body {
+  font-family: campaign, sans-serif;
+  color: #20293d;
+  font-size: 16px;
+}
+
+a {
+  color: #f4564e;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #f4564e;
+  text-decoration: none;
+}
+
+#wrapper {
+  max-width: none;
+  padding: 0;
+}
+
+#main h1:first-of-type:not(.app-title) {
+  display: none;
+}
+
+#main {
+  margin-bottom: 75px;
+}
+
+#main > #logo {
+  background: url(https://images.prismic.io/plotly-marketing-website/0547409f-c280-4aab-86e5-c6ba56c5a040_greenhouse_header-01.jpg);
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#logo a img {
+  /* hack!! greenhouse has its own sizing rules for logos, we're overriding that to fit both the needs of:
+  - the job board header
+  - linkedin social sharing rules
+   */
+  display: block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(https://images.prismic.io/plotly-marketing-website/3cf04d7c-3a49-4344-b1c1-56cbdd1f0f8b_greenhouse-logo.png)
+    no-repeat;
+  width: 200px;
+  height: 75px;
+  padding-left: 200px;
+  background-size: contain;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-family: jubilat, serif;
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+#footer {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  max-width: 980px;
+  margin: auto;
+}
+
+section > h3 {
+  text-align: left;
+  display: block;
+  margin: 24px 0;
+  font-size: 20px !important;
+  font-weight: 400 !important;
+}
+
+.opening {
+  text-align: left;
+  display: block;
+}
+
+.opening a {
+  color: #60bab6;
+  font-weight: 500;
+}
+
+.opening a:hover {
+  color: #60bab6;
+  font-weight: 500;
+}
+
+#content > p {
+  text-align: center;
+}
+
+#content,
+#board_title,
+#filter-count,
+h1 {
+  max-width: 980px;
+  margin: auto;
+}
+@media (max-width: 980px) {
+  #content,
+  #board_title,
+  #filter-count,
+  section,
+  h1 {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  #app_body {
+    padding: 20px !important;
+  }
+}
+
+#board_title {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+#main {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#main > #app_body {
+  max-width: none;
+  padding: 20px;
+  background: url(https://images.prismic.io/plotly-marketing-website/8fc986b5-3f95-4932-9c3f-c7a7340e12c9_greenhouse-detail-background.jpg)
+    no-repeat;
+}
+
+#apply_button,
+#submit_app {
+  margin-top: 30px !important;
+  margin-right: 30px !important;
+  text-decoration: none !important;
+  background-color: #357e94 !important;
+}
+
+#apply_button:hover,
+#submit_app:hover {
+  color: white;
+  opacity: 0.7;
+}
+
+#main > #app_body > #header {
+  max-width: 980px;
+  margin: auto;
+  padding-top: 80px;
+  padding-right: 0;
+  text-align: center;
+}
+
+#main > #app_body > #header > h1 {
+  padding-bottom: 10px;
+}
+
+#main > #app_body > #content > p:first-of-type {
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
+}
+
+#main > #app_body > #content > ul {
+  list-style: none; /* Remove default bullets */
+}
+
+#main > #app_body > #content > ul > li:before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #60bab6; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+#main > #app_body > #logo {
+  background: none;
+  justify-content: none;
+  align-items: none;
+}
+
+#main > #app_body > #application {
+  margin: auto;
+  background-color: white;
+  border: 1px solid #ebf0f8;
+  box-shadow: 1px 1px 10px #dde7f2;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}

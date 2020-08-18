@@ -1,0 +1,22 @@
+{
+  "name": "external-marketing-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prettier": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plotly/external-marketing-services.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/plotly/external-marketing-services/issues"
+  },
+  "homepage": "https://github.com/plotly/external-marketing-services#readme",
+  "devDependencies": {
+    "prettier": "^2.0.5"
+  }
+}

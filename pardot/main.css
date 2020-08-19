@@ -3,6 +3,11 @@
 @import url("https://use.typekit.net/xib5kch.css");
 
 /*DEFAULTS*/
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: "open-sans", sans-serif;
@@ -56,6 +61,17 @@ a {
 }
 img {
     max-width: 100%;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+    line-height: inherit;
+}
+button,
+input {
+    overflow: visible;
 }
 
 /*LAYOUT CONTAINERS*/
@@ -123,7 +139,7 @@ img {
 /*LAYOUT ELEMENTS*/
 .date {
     color: #60bab6;
-    font-size: 12pt;
+    font-size: 14pt;
     font-weight: normal;
 }
 .btn {
@@ -168,7 +184,7 @@ form textarea {
 }
 #plotly-body form input[type="submit"] {
     background-color: #60bab6;
-    font-size: 12px;
+    font-size: 12pt;
     font-family: "open-sans", sans-serif;
     font-style: normal;
     font-style: italic;
@@ -180,6 +196,7 @@ form textarea {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-top: 30px;
+    cursor: pointer;
 }
 #plotly-body form.form p label {
     width: auto;
@@ -295,8 +312,7 @@ form textarea {
         padding: 0;
     }
 }
-
-/* SPEAKER TEMPLATES */
+/* SPEAKERS */
 .speaker {
     margin-bottom: 50px;
     clear: both;

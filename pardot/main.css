@@ -1,3 +1,7 @@
+/*FONT*/
+@import url("https://use.typekit.net/dsx1rks.css");
+@import url("https://use.typekit.net/xib5kch.css");
+
 /*DEFAULTS*/
 body {
     margin: 0;
@@ -32,6 +36,7 @@ h4 {
 }
 ul {
     padding-inline-start: 0;
+    padding-left: 10px;
 }
 li {
     list-style: none; /* Remove default bullets */
@@ -52,11 +57,6 @@ a {
 img {
     max-width: 100%;
 }
-
-/* PLOTLY REQUIREMENTS */
-/*FONT*/
-@import url("https://use.typekit.net/dsx1rks.css");
-@import url("https://use.typekit.net/xib5kch.css");
 
 /*LAYOUT CONTAINERS*/
 .container {
@@ -96,19 +96,6 @@ img {
     padding-left: 25px;
     max-width: 150px;
     padding-bottom: 10px;
-}
-
-/* SPEAKERS */
-.speaker {
-    margin-bottom: 50px;
-    clear: both;
-    min-height: 220px;
-}
-.speaker-img {
-    width: 200px;
-    object-fit: fill;
-    margin-right: 20px;
-    float: left;
 }
 
 /*FOOTER*/
@@ -155,11 +142,6 @@ img {
 }
 .hide-desktop {
     display: none;
-}
-.join-this {
-    font-weight: 500;
-    display: block;
-    margin-bottom: -10px;
 }
 
 /* FORMS */
@@ -301,14 +283,6 @@ form textarea {
         max-width: 100px;
     }
 
-    /*SPEAKERS*/
-    .speaker {
-        margin: 20px 0;
-    }
-    .speaker .speaker-img {
-        width: 150px;
-    }
-
     /*LAYOUT ELEMENTS*/
     .hide-mobile {
         display: none !important;
@@ -319,5 +293,29 @@ form textarea {
     .logos-img img {
         transform: scale(0.7);
         padding: 0;
+    }
+}
+
+/* SPEAKER TEMPLATES */
+.speaker {
+    margin-bottom: 50px;
+    clear: both;
+    min-height: 220px;
+}
+.speaker-img {
+    width: 200px;
+    object-fit: fill;
+    margin-right: 20px;
+    float: left;
+}
+
+/* MOBILE VIEW */
+@media only screen and (max-width: 767px) {
+    /*SPEAKERS*/
+    .speaker {
+        margin: 20px 0;
+    }
+    .speaker .speaker-img {
+        width: 150px;
     }
 }

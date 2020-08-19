@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+        <base href="https://go.plot.ly" />
+        <meta http-equiv="Content-Type" content="text/html" />
+        <meta name="description" content="%%description%%" />
+        <title>%%title%%</title>
+        <meta property="og:title" content="%%title%%" />
+        <meta property="og:description" content="%%description%%" />
+        <meta
+            property="og:image"
+            content="https://images.prismic.io/plotly-marketing-website/a50d7344-d14a-41a9-b6bd-b5015dbebfdb_banner_linkedin-03-min.jpg?auto=compress,format"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            href="https://storage.pardot.com/719653/64269/favicon.png"
+        />
+        <link rel="canonical" href="https://go.plotly.com/dash-databricks" />
+        <style>
+            /*FONT*/
+            @import url("https://use.typekit.net/dsx1rks.css");
+            @import url("https://use.typekit.net/xib5kch.css");
+
+            /*DEFAULTS*/
+            *,
+            ::after,
+            ::before {
+                box-sizing: border-box;
+            }
+            body {
+                margin: 0;
+                font-family: "open-sans", sans-serif;
+                padding-top: 20px;
+                letter-spacing: 0px;
+                color: #3f4f75;
+                font-size: 12pt;
+            }
+            h1,
+            h2,
+            h3,
+            h4,
+            h5 {
+                margin-block-start: 10px;
+                margin-block-end: 10px;
+                color: #20293d;
+                font-weight: 300;
+                font-family: "jubilat", serif;
+            }
+            h1 {
+                font-size: 48pt;
+            }
+            h2 {
+                font-size: 36pt;
+            }
+            h3 {
+                font-size: 24pt;
+            }
+            h4 {
+                font-size: 18pt;
+            }
+            ul {
+                padding-inline-start: 0;
+                padding-left: 10px;
+            }
+            li {
+                list-style: none; /* Remove default bullets */
+                margin-left: 20px;
+                padding: 5px 0px;
+            }
+            li::before {
+                content: "\2022";
+                color: #61bab6;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            a {
+                color: #60bab6;
+            }
+            img {
+                max-width: 100%;
+            }
+            button,
+            input,
+            optgroup,
+            select,
+            textarea {
+                line-height: inherit;
+            }
+            button,
+            input {
+                overflow: visible;
+            }
+
+            /*LAYOUT CONTAINERS*/
+            .container {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+            .template-content {
+                display: flex;
+                margin-bottom: 20px;
+            }
+            .template-content .left {
+                width: 60%;
+                padding-right: 50px;
+            }
+            .template-content .right {
+                width: 40%;
+                background-color: #fafafa;
+            }
+            .paragraph {
+                margin-top: 20px;
+            }
+            .sidebar,
+            .footer {
+                text-align: center;
+                padding: 20px;
+            }
+
+            /*NAVBAR*/
+            .navbar-icons {
+                margin: 15px 0;
+            }
+            .navbar-plotly-icon img {
+                max-width: 115px;
+            }
+            .navbar-databricks-icon img {
+                padding-left: 25px;
+                max-width: 150px;
+                padding-bottom: 10px;
+            }
+
+            /*FOOTER*/
+            .footer {
+                background: #e4f5f2;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer h4 {
+                font-weight: 450;
+            }
+            .logos-img {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                max-width: 1000px;
+            }
+            .logos-img img {
+                transform: scale(0.7);
+                padding: 0;
+            }
+
+            /*LAYOUT ELEMENTS*/
+            .date {
+                color: #60bab6;
+                font-size: 14pt;
+                font-weight: normal;
+            }
+            .btn {
+                background-color: #60bab6;
+            }
+            .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            .hide-mobile {
+                display: inline-block;
+            }
+            .hide-desktop {
+                display: none;
+            }
+
+            /* FORMS */
+            #plotly-body form {
+                margin-top: 30px;
+                text-align: left;
+            }
+            #plotly-body form input,
+            form select,
+            form textarea {
+                width: 100%;
+                border: 1px #d1d6e1 solid;
+                padding: 8px 6px;
+                color: #57585a;
+                background: #fff;
+                -webkit-appearance: none;
+            }
+            #plotly-body form label {
+                font-family: "open-sans", sans-serif;
+                color: #586686;
+                font-size: 15px;
+                font-weight: 100;
+                margin-bottom: 5px;
+            }
+            #plotly-body form input[type="submit"] {
+                background-color: #60bab6;
+                font-size: 12pt;
+                font-family: "open-sans", sans-serif;
+                font-style: normal;
+                font-style: italic;
+                color: #fff;
+                font-weight: 550;
+                border: 0px;
+                border-radius: 25px;
+                padding: 12px 15px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-top: 30px;
+                cursor: pointer;
+            }
+            #plotly-body form.form p label {
+                width: auto;
+            }
+            #plotly-body form input[type="submit"] {
+                width: 100%;
+            }
+            #plotly-body form.form p.submit {
+                margin: 0px 0 20px 0;
+                padding: 0;
+            }
+            #plotly-body form.form p.no-label {
+                margin: 0px 0 0px 0;
+            }
+            #plotly-body form.form p span.description {
+                margin-left: 0px;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                span.value
+                > span {
+                display: flex;
+            }
+
+            /*FORM: Terms and conditions*/
+            #plotly-body form.form p.pd-checkbox.Terms_Conditions_acceptance {
+                float: left;
+                width: 100%;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                label {
+                display: none;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                span.value {
+                margin-left: 0;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                span.value
+                > span {
+                align-items: baseline;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                input[type="checkbox"] {
+                width: auto !important;
+                margin: 0 !important;
+                margin-right: 5px !important;
+                -webkit-appearance: auto;
+            }
+            #plotly-body
+                form.form
+                p.pd-checkbox.Terms_Conditions_acceptance
+                span.value
+                label {
+                display: inline-block;
+                padding-right: 15px;
+            }
+            #plotly-body form.form p label.inline {
+                line-height: 1.5em;
+            }
+
+            /* MOBILE VIEW */
+            @media only screen and (max-width: 767px) {
+                /*DEFAULTS*/
+                h1 {
+                    font-size: 48px;
+                }
+                h2 {
+                    font-size: 36px;
+                }
+                h3 {
+                    font-size: 24px;
+                }
+                h4 {
+                    font-size: 18px;
+                }
+
+                /*LAYOUT CONTAINERS*/
+                .template-content {
+                    flex-direction: column;
+                }
+                .template-content .left {
+                    width: 100%;
+                    padding-right: 0px;
+                }
+                .template-content .right {
+                    width: 100%;
+                    margin-top: 10px;
+                }
+
+                /*NAVBAR*/
+                .navbar-icons {
+                    display: flex;
+                    justify-content: space-between;
+                }
+                .navbar-databricks-icon img {
+                    max-width: 110px;
+                    margin-top: 8px;
+                    padding: 0;
+                }
+                .navbar-plotly-icon img {
+                    max-width: 100px;
+                }
+
+                /*LAYOUT ELEMENTS*/
+                .hide-mobile {
+                    display: none !important;
+                }
+                .hide-desktop {
+                    display: inline-block;
+                }
+                .logos-img img {
+                    transform: scale(0.7);
+                    padding: 0;
+                }
+            }
+        </style>
+        <style>
+            /* SPEAKERS */
+            .speaker {
+                margin-bottom: 20px;
+                clear: both;
+                min-height: 200px;
+            }
+            .speaker-img {
+                width: 150px;
+                object-fit: fill;
+                margin-right: 20px;
+                float: left;
+            }
+
+            /* MOBILE VIEW */
+            @media only screen and (max-width: 767px) {
+                /*SPEAKERS*/
+                .speaker {
+                    margin: 20px 0;
+                }
+                .speaker .speaker-img {
+                    width: 150px;
+                }
+            }
+        </style>
+    </head>
+    <body id="plotly-body">
+        <main role="main" class="container">
+            <div class="navbar-icons">
+                <a class="navbar-plotly-icon" href="https://plotly.com/">
+                    <img
+                        src="https://storage.pardot.com/719653/58932/Plotly_logo.png"
+                        pardot-region="plotly"
+                        alt="logo"
+                    />
+                </a>
+            </div>
+        </main>
+    </body>
+</html>

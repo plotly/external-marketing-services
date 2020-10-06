@@ -174,8 +174,8 @@ h1 {
 }
 
 #main > #app_body > #content > p:first-of-type {
-  border-bottom: 1px solid black;
-  padding-bottom: 30px;
+  border-top: 1px solid black;
+  padding-top: 30px;
 }
 
 #main > #app_body > #content > ul {
